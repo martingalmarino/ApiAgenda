@@ -97,7 +97,7 @@ export default function SubscriptionForm() {
       } else {
         throw new Error('Error en la suscripción');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setSubmitMessage('Hubo un error al procesar tu suscripción. Por favor, inténtalo de nuevo.');
     } finally {

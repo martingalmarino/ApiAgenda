@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
         { 
           success: false, 
           message: 'Datos de suscripción inválidos',
-          errors: error.errors 
+          errors: error.issues 
         },
         { status: 400 }
       );
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Handle OPTIONS request for CORS (if needed)
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS() {
   return new NextResponse(null, {
     status: 200,
     headers: {
