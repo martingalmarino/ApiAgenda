@@ -155,9 +155,24 @@ colors: {
 
 ### Vercel (Recomendado)
 
-1. Conecta tu repositorio a Vercel
-2. Configura las variables de entorno si es necesario
-3. Deploy automático en cada push
+1. **Conecta tu repositorio a Vercel:**
+   - Ve a [vercel.com](https://vercel.com)
+   - Haz clic en "New Project"
+   - Importa el repositorio `martingalmarino/ApiAgenda`
+   - Vercel detectará automáticamente que es un proyecto Next.js
+
+2. **Configura las variables de entorno:**
+   - En el dashboard de Vercel, ve a Settings > Environment Variables
+   - Añade las variables necesarias desde `.env.example`
+   - Para empezar, solo necesitas `ZAPIER_WEBHOOK_URL` si vas a usar integraciones
+
+3. **Deploy automático:**
+   - Cada push a la rama `main` desplegará automáticamente
+   - Vercel te dará una URL como `https://api-agenda-xxx.vercel.app`
+
+4. **Dominio personalizado (opcional):**
+   - En Settings > Domains puedes configurar un dominio personalizado
+   - Recomendado: `apiagenda.com` o `apiagenda.vercel.app`
 
 ### Otras Plataformas
 
