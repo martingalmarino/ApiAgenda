@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Calendar, Crown } from 'lucide-react';
 
 export default function CalendarEmbed() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -43,9 +44,10 @@ export default function CalendarEmbed() {
           
           {/* Premium notice */}
           <div className="bg-honey-50 border border-honey-200 rounded-lg p-4 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center gap-2">
+              <Crown className="h-4 w-4 text-honey-600" />
               <span className="text-honey-600 text-sm font-medium">
-                💎 Los suscriptores premium reciben alertas personalizadas por provincia
+                Los suscriptores premium reciben alertas personalizadas por provincia
               </span>
             </div>
           </div>
@@ -74,7 +76,7 @@ export default function CalendarEmbed() {
             <div className="aspect-video bg-gray-100 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-16 h-16 bg-honey-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📅</span>
+                  <Calendar className="h-8 w-8 text-honey-600" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Calendario de Google

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Target, MessageSquare, MapPin } from 'lucide-react';
 
 export default function BenefitsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -26,19 +27,19 @@ export default function BenefitsSection() {
 
   const benefits = [
     {
-      icon: '🎯',
+      icon: Target,
       title: 'Alertas Personalizadas',
       description: 'Recibe notificaciones específicas para tu provincia con información sobre tratamientos, floraciones y condiciones climáticas ideales para la apicultura.',
       color: 'honey'
     },
     {
-      icon: '📱',
+      icon: MessageSquare,
       title: 'WhatsApp & Email',
       description: 'Mantente informado a través de múltiples canales. Recibe recordatorios por WhatsApp y emails detallados con toda la información que necesitas.',
       color: 'field'
     },
     {
-      icon: '🗺️',
+      icon: MapPin,
       title: 'Contenido por Provincia',
       description: 'Información específica para cada provincia argentina, considerando las diferencias climáticas y florales que afectan a tus colmenas.',
       color: 'honey'
@@ -65,19 +66,25 @@ export default function BenefitsSection() {
 
         {/* Benefits grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              {/* Icon */}
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
-                benefit.color === 'honey' 
-                  ? 'bg-honey-100' 
-                  : 'bg-field-100'
-              }`}>
-                <span className="text-3xl">{benefit.icon}</span>
-              </div>
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                {/* Icon */}
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
+                  benefit.color === 'honey' 
+                    ? 'bg-honey-100' 
+                    : 'bg-field-100'
+                }`}>
+                  <IconComponent className={`h-8 w-8 ${
+                    benefit.color === 'honey' 
+                      ? 'text-honey-600' 
+                      : 'text-field-600'
+                  }`} />
+                </div>
 
               {/* Content */}
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -87,14 +94,15 @@ export default function BenefitsSection() {
                 {benefit.description}
               </p>
 
-              {/* Decorative element */}
-              <div className={`mt-6 w-12 h-1 rounded-full ${
-                benefit.color === 'honey' 
-                  ? 'bg-honey-400' 
-                  : 'bg-field-400'
-              }`}></div>
-            </div>
-          ))}
+                {/* Decorative element */}
+                <div className={`mt-6 w-12 h-1 rounded-full ${
+                  benefit.color === 'honey' 
+                    ? 'bg-honey-400' 
+                    : 'bg-field-400'
+                }`}></div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Additional info */}

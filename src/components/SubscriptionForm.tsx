@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+import { CheckCircle, AlertTriangle } from 'lucide-react';
 
 // Validation schema
 const subscriptionSchema = z.object({
@@ -223,14 +223,14 @@ export default function SubscriptionForm() {
             {/* Status messages */}
             {submitStatus === 'success' && (
               <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <CheckCircleIcon className="h-6 w-6 text-green-600" />
+                <CheckCircle className="h-6 w-6 text-green-600" />
                 <p className="text-green-800 font-medium">{submitMessage}</p>
               </div>
             )}
 
             {submitStatus === 'error' && (
               <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <ExclamationTriangleIcon className="h-6 w-6 text-red-600" />
+                <AlertTriangle className="h-6 w-6 text-red-600" />
                 <p className="text-red-800 font-medium">{submitMessage}</p>
               </div>
             )}

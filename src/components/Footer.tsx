@@ -1,5 +1,7 @@
 'use client';
 
+import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle, Hexagon } from 'lucide-react';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -18,7 +20,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-honey-400 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">🐝</span>
+                <Hexagon className="h-5 w-5 text-white" />
               </div>
               <span className="ml-2 text-xl font-bold">ApiAgenda</span>
             </div>
@@ -33,24 +35,21 @@ export default function Footer() {
                 className="text-gray-400 hover:text-honey-400 transition-colors"
                 aria-label="Facebook"
               >
-                <span className="sr-only">Facebook</span>
-                📘
+                <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 className="text-gray-400 hover:text-honey-400 transition-colors"
                 aria-label="Instagram"
               >
-                <span className="sr-only">Instagram</span>
-                📷
+                <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 className="text-gray-400 hover:text-honey-400 transition-colors"
                 aria-label="WhatsApp"
               >
-                <span className="sr-only">WhatsApp</span>
-                📱
+                <MessageCircle className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -99,7 +98,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center">
-                <span className="mr-2">📧</span>
+                <Mail className="h-4 w-4 mr-2" />
                 <a
                   href="mailto:info@apiagenda.com"
                   className="hover:text-honey-400 transition-colors"
@@ -108,7 +107,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center">
-                <span className="mr-2">📱</span>
+                <Phone className="h-4 w-4 mr-2" />
                 <a
                   href="https://wa.me/5491123456789"
                   className="hover:text-honey-400 transition-colors"
@@ -117,7 +116,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 mt-1">📍</span>
+                <MapPin className="h-4 w-4 mr-2 mt-1" />
                 <span>
                   Buenos Aires, Argentina<br />
                   Servicio Nacional
@@ -159,7 +158,7 @@ export default function Footer() {
         {/* Local relevance notice */}
         <div className="mt-8 p-4 bg-gray-800 rounded-lg">
           <div className="flex items-start">
-            <span className="text-honey-400 mr-3 mt-1">🇦🇷</span>
+            <MapPin className="h-5 w-5 text-honey-400 mr-3 mt-1" />
             <div>
               <h4 className="font-semibold text-honey-400 mb-1">
                 Información Local para Apicultores Argentinos

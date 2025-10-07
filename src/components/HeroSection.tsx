@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Calendar, Smartphone, Thermometer } from 'lucide-react';
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -83,7 +84,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-honey-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📅</span>
+                <Calendar className="h-8 w-8 text-honey-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Calendario Nacional
@@ -94,7 +95,7 @@ export default function HeroSection() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-field-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📱</span>
+                <Smartphone className="h-8 w-8 text-field-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Alertas Personalizadas
@@ -105,7 +106,7 @@ export default function HeroSection() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-honey-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌡️</span>
+                <Thermometer className="h-8 w-8 text-honey-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Datos Climáticos

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Menu, X, Hexagon } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <div className="flex items-center">
               <div className="w-8 h-8 bg-honey-400 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">🐝</span>
+                <Hexagon className="h-5 w-5 text-white" />
               </div>
               <span className="ml-2 text-xl font-bold text-gray-900">
                 ApiAgenda
@@ -84,9 +84,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
+                <X className="h-6 w-6" />
               ) : (
-                <Bars3Icon className="h-6 w-6" />
+                <Menu className="h-6 w-6" />
               )}
             </button>
           </div>
